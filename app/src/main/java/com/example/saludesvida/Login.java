@@ -49,7 +49,7 @@ public class Login extends AppCompatActivity {
                             // Log.d(TAG, "signInWithCustomToken:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(getApplicationContext(), "Authentication Correcta", Toast.LENGTH_SHORT).show();
-                            Intent i =  new Intent(getApplicationContext(), MainActivity.class);
+                            Intent i =  new Intent(getApplicationContext(), Navigation.class);
                             startActivity(i);
                             // updateUI(user);
                         } else {
