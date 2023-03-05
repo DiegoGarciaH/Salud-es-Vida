@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Salud es Vida</string>
+    <string name="iniciar_session">Iniciar</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="registrate">Aun no tienes una cuenta? <b>Registrate</b></string>
+    <string name="mail">Correo</string>
+    <string name="contra">Contraseña</string>
+    <string name="confirmar">Repetir Contraseña</string>
+</resources>
