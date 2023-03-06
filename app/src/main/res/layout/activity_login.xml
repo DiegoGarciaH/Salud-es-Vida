@@ -8,9 +8,22 @@
     android:layout_height="match_parent"
     >
 
+    <TextView
+        android:id="@+id/txt_ingresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingresar"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+
     <LinearLayout
-        android:layout_width="372dp"
-        android:layout_height="679dp"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,29 +31,76 @@
         app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.099">
 
-        <EditText
-            android:id="@+id/correo"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/correo_layout"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:layout_marginBottom="16dp"
+            android:background="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:boxBackgroundColor="@color/teal_200"
+            android:textColorHint="@color/purple_700"
+            android:textColor="@color/black"
+            android:hint="Correo electrónico">
 
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
+            android:background="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:boxBackgroundColor="@color/teal_200"
+            android:textColorHint="@color/purple_700"
+            android:textColor="@color/black"
+            android:hint="Contraseña"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <Button
             android:id="@+id/btn_iniciar_session"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center|center_horizontal|center_vertical"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="15dp"
+            android:backgroundTint="#006A6A"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/confirmation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             android:onClick="iniciarSession"
             android:text="@string/iniciar_session" />
+
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
