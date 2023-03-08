@@ -7,17 +7,16 @@ import android.widget.ImageView;
 
 public class FoodModel {
     private String id, price;
-    private String title, ingredients, description, process;
-
-    private String img;
+    private String img, title;
+    private String ingredients, description, process;
 
     public void setId(String id){this.id = id;}
-
     public void setTitle(String title){this.title = title;}
-
     public void setPrice(String price){this.price = price;}
-
     public void setImg(String uri){this.img = uri;}
+    public void setIngredients(String ingredients){this.ingredients = ingredients;}
+    public void setDescription(String description){this.description = description;}
+    public void setProcess(String process){this.process = process;}
 
     public String getId() {
         return id;
@@ -32,5 +31,17 @@ public class FoodModel {
     }
     public String getTitle() {
         return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public String getProcess() {
+        return process;
     }
 }

@@ -1,5 +1,8 @@
 package com.example.saludesvida.Food;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +15,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.saludesvida.Food.Foodview;
 import com.example.saludesvida.R;
 import com.squareup.picasso.Picasso;
 
@@ -43,7 +47,15 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>{
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(fragment.getContext(), "No me presiones", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(view.getContext(), Foodview.class);
+                intent.putExtra("foodid", food.getId());
+                intent.putExtra("foodtitle", food.getTitle());
+                intent.putExtra("foodprice", food.getPrice());
+                intent.putExtra("foodimg", food.getImg());
+                intent.putExtra("foodingredients", food.getIngredients());
+                intent.putExtra("foodprocess", food.getProcess());
+                intent.putExtra("fooddescription", food.getDescription());
+                view.getContext().startActivity(intent);
             }
         });
     }
