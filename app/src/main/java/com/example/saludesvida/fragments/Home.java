@@ -47,18 +47,20 @@ public class Home extends Fragment {
         food.setTitle("Hamburguesa Vegetariana");
         food.setImg("https://biancazapatka.com/wp-content/uploads/2020/05/veganer-bohnen-burger.jpg");
 
-        list.add(food);
-        list.add(food);
-        list.add(food);
-        list.add(food);
-        list.add(food);
-        list.add(food);
-        list.add(food);
-        list.add(food);
-        list.add(food);
-        list.add(food);
-        list.add(food);
-        list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
+        list.add(food);list.add(food);
 
         adapter.setFoodlist(list);
         adapter.notifyDataSetChanged();

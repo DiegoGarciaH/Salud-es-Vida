@@ -36,7 +36,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>{
         holder.price.setText(food.getPrice());
 
         // establecer la imagen desde una url
-        Picasso.get().load(food.getImg()).into(holder.img);
+        if (!food.getImg().isEmpty()){
+            Picasso.get().load(food.getImg()).into(holder.img);
+        }
 
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
