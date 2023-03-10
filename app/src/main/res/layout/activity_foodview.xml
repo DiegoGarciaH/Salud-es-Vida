@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.4" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
@@ -23,21 +23,28 @@
         app:layout_constraintTop_toTopOf="parent" >
         <ImageView
             android:id="@+id/imgFood"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
 
-        <TextView
-            android:id="@+id/lblTitle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Titulo de platillo"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="30dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+            android:background="@drawable/gradient">
+            <TextView
+                android:id="@+id/lblTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titulo de platillo"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,22 +54,143 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
+            android:padding="24dp"
             android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/lblIngredients"
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Imgredientes"/>
-            <TextView
-                android:id="@+id/lblDescription"
+                android:layout_marginBottom="24dp"
+                android:id="@+id/carddetails"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorOnSecondary"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Descripción"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textStyle="bold" />
+
+                        <Button
+                            style="@style/Widget.Material3.Button.IconButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:onClick="ChangeDetails"
+                            app:icon="@drawable/round_keyboard_arrow_down_24" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lblDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Imgredientes"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="24dp"
+                android:id="@+id/cardingredients"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorOnSecondary"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ingredientes"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textStyle="bold" />
+
+                        <Button
+                            style="@style/Widget.Material3.Button.IconButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:onClick="ChangeIngredients"
+                            app:icon="@drawable/round_keyboard_arrow_down_24" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lblIngredientes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Imgredientes"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="descripcion"/>
-            <TextView
-                android:id="@+id/lblProcess"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="preparacion"/>
+                app:cardCornerRadius="10dp"
+                android:id="@+id/cardprocess"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorOnSecondary">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Preparación"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textStyle="bold" />
+
+                        <Button
+                            style="@style/Widget.Material3.Button.IconButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:onClick="ChangeProcess"
+                            app:icon="@drawable/round_keyboard_arrow_down_24" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lblProcess"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="preparacion"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

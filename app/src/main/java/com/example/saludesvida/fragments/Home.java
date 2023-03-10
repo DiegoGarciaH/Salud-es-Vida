@@ -46,9 +46,9 @@ public class Home extends Fragment {
         food.setPrice("$298 MXN");
         food.setTitle("Hamburguesa Vegetariana");
         food.setImg("https://biancazapatka.com/wp-content/uploads/2020/05/veganer-bohnen-burger.jpg");
-        food.setIngredients("Esto es para ingredientes");
-        food.setDescription("Esto es para descripcion");
-        food.setProcess("Procesos de fuga");
+        food.setIngredients("- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\n- Pimienta negra recien molida\na");
+        food.setDescription("Esto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\nEsto es para descripcion\n");
+        food.setProcess("Procesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\nProcesos de fuga\n");
         list.add(food);
 
         FoodModel food2 = new FoodModel();
