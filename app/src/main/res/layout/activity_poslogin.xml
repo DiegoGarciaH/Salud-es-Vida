@@ -37,70 +37,60 @@
         android:id="@+id/TextAltura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:hint="Altura"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre2"
-        tools:layout_editor_absoluteX="-2dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="179dp" />
 
     <EditText
         android:id="@+id/etNombre3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:hint="Peso"
-        app:layout_constraintTop_toBottomOf="@+id/TextAltura"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="256dp" />
 
     <EditText
         android:id="@+id/etNombre4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:hint="Presupuesto"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre3"
-        tools:layout_editor_absoluteX="-2dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="343dp" />
 
     <EditText
         android:id="@+id/etNombre2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:hint="Nombre"
-        app:layout_constraintTop_toBottomOf="@+id/TextCuenta"
-        tools:layout_editor_absoluteX="-2dp" />
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="107dp" />
 
     <TextView
         android:id="@+id/CM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="356dp"
-        android:layout_marginTop="48dp"
         android:text="cm"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre2" />
+        tools:layout_editor_absoluteX="367dp"
+        tools:layout_editor_absoluteY="187dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/CM2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="356dp"
-        android:layout_marginTop="60dp"
         android:text="kg"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CM" />
+        tools:layout_editor_absoluteX="367dp"
+        tools:layout_editor_absoluteY="265dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/CM4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="344dp"
-        android:layout_marginTop="52dp"
         android:text="$ mxn"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CM2" />
+        tools:layout_editor_absoluteX="357dp"
+        tools:layout_editor_absoluteY="356dp" />
 
     <Button
         android:id="@+id/btn_guardat"
@@ -118,7 +108,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_cancelar"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="230dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/white"
+        android:text="Cancelar"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre4" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_guardat"
+        app:layout_constraintVertical_bias="0.114" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
