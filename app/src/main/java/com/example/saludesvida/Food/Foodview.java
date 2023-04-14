@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.saludesvida.MainActivity;
 import com.example.saludesvida.R;
+import com.example.saludesvida.Sign;
 import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Picasso;
 
@@ -37,7 +39,6 @@ public class Foodview extends AppCompatActivity {
         food.setProcess(intent.getStringExtra("foodprocess"));
         food.setDescription(intent.getStringExtra("fooddescription"));
         food.setIngredients(intent.getStringExtra("foodingredients"));
-        food.setId(intent.getStringExtra("foodid"));
         food.setTitle(intent.getStringExtra("foodtitle"));
         food.setImg(intent.getStringExtra("foodimg"));
         food.setPrice(intent.getStringExtra("foodprice"));
@@ -94,5 +95,10 @@ public class Foodview extends AppCompatActivity {
             stateingredients = 0;
             lblIngredients.setVisibility(View.GONE);
         }
+    }
+
+    public void Adderall(View view){
+        Intent intent = new Intent(Foodview.this, Register.class);
+        startActivity(intent);
     }
 }

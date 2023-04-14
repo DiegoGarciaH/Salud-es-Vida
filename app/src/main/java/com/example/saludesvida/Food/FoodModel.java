@@ -6,11 +6,22 @@ import android.net.Uri;
 import android.widget.ImageView;
 
 public class FoodModel {
-    private String id, price;
+    private String price;
     private String img, title;
     private String ingredients, description, process;
 
-    public void setId(String id){this.id = id;}
+    public FoodModel(){}
+
+    public FoodModel (String title, String price, String description, String ingredients, String process,
+                      String img){
+        this.title = title;
+        this.price = price;
+        this.img = img;
+        this.ingredients = ingredients;
+        this.description = description;
+        this.process = process;
+    }
+
     public void setTitle(String title){this.title = title;}
     public void setPrice(String price){this.price = price;}
     public void setImg(String uri){this.img = uri;}
@@ -18,9 +29,6 @@ public class FoodModel {
     public void setDescription(String description){this.description = description;}
     public void setProcess(String process){this.process = process;}
 
-    public String getId() {
-        return id;
-    }
 
     public String getImg() {
         return img;

@@ -14,7 +14,23 @@
       },
       "oauth_client": [
         {
-          "client_id": "38815414978-cv3hiujdbcv45pkdv649ouppuvv6lkta.apps.googleusercontent.com",
+          "client_id": "38815414978-fdt14fvsutfngh84lh6altgt72dc562u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.saludesvida",
+            "certificate_hash": "b572f3db5d79653f2e2a9d6144540fd1ccda1e59"
+          }
+        },
+        {
+          "client_id": "38815414978-v4ochbc0fckj02ct3f2sdft5c4hltbsd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.saludesvida",
+            "certificate_hash": "277c39dee45312790f04aec5a948ed4aea9d1491"
+          }
+        },
+        {
+          "client_id": "38815414978-ofn356eg659ur58ap28b81h138sgee0g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

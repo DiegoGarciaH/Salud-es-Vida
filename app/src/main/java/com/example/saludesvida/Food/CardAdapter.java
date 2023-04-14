@@ -48,7 +48,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), Foodview.class);
-                intent.putExtra("foodid", food.getId());
                 intent.putExtra("foodtitle", food.getTitle());
                 intent.putExtra("foodprice", food.getPrice());
                 intent.putExtra("foodimg", food.getImg());
